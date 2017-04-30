@@ -8,7 +8,6 @@ public class Job {
 	}
 
 	public void doTest(){
-		//�����˭������
 		/*Zhangming zm = new Zhangming();
 		zm.test();*/
 		/*Lida ld = new Lida();
