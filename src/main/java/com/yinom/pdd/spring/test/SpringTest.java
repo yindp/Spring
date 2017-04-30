@@ -1,7 +1,8 @@
 package com.yinom.pdd.spring.test;
 
-import com.yinom.pdd.spring.manage.Job;
-import com.yinom.pdd.spring.manage.Lida;
+import com.yinom.pdd.spring.ioc.Job;
+import com.yinom.pdd.spring.ioc.Lida;
+import com.yinom.pdd.spring.model.Employee;
 import com.yinom.pdd.spring.service.HelloSpring;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,5 +37,15 @@ public class SpringTest {
         ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Job job = (Job) ac.getBean("job");
         job.doTest();
+    }
+
+    /**
+     * properties DI
+     */
+    @Test
+    public void testEmployeeDI() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
+        Employee emp = (Employee) ac.getBean("employee");
+        System.out.println(emp);
     }
 }

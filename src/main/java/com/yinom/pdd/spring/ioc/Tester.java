@@ -1,4 +1,4 @@
-package com.yinom.pdd.spring.manage;
+package com.yinom.pdd.spring.ioc;
 
 /**
  * Created by yindp on 4/30/17.
