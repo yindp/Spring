@@ -30,6 +30,7 @@ public class SpringTest {
         job.setTester(new Lida());
         job.doTest();
     }
+
     @Test
     public void testJob02() {
         ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
