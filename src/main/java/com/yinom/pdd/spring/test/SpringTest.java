@@ -43,9 +43,27 @@ public class SpringTest {
      * properties DI
      */
     @Test
-    public void testEmployeeDI() {
+    public void testEmployeeDI01() {
         ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
-        Employee emp = (Employee) ac.getBean("employee");
+        Employee emp = (Employee) ac.getBean("employee1");
+        System.out.println(emp);
+    }
+    /**
+     * constructor type DI
+     */
+    @Test
+    public void testEmployeeDI02() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
+        Employee emp = (Employee) ac.getBean("employee2");
+        System.out.println(emp);
+    }
+    /**
+     * constructor index DI
+     */
+    @Test
+    public void testEmployeeDI03() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
+        Employee emp = (Employee) ac.getBean("employee3");
         System.out.println(emp);
     }
 }
