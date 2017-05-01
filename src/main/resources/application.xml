@@ -76,4 +76,22 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
             </bean>
         </property>
     </bean>
+
+
+   <!-- Collection DI-->
+    <!--List parameter DI-->
+
+    <bean id="employee9" class="com.yinom.pdd.spring.model.Employee">
+        <property name="id" value="97"/>
+        <property name="name" value="Ils"/>
+        <property name="salary" value="23000"/>
+        <property name="department" ref="department"/>
+        <property name="interests">
+            <list>
+                <value>Sport</value>
+                <value>Money</value>
+                <value>Sing</value>
+            </list>
+        </property>
+    </bean>
 </beans>

@@ -1,5 +1,7 @@
 package com.yinom.pdd.spring.model;
 
+import java.util.List;
+
 /**
  * Created by yindp on 4/30/17.
  */
@@ -8,6 +10,16 @@ public class Employee {
     private String name;
     private double salary;
     private Department department;
+    private List<String> interests;
+
+
+    public List<String> getInterests() {
+        return interests;
+    }
+
+    public void setInterests(List<String> interests) {
+        this.interests = interests;
+    }
 
     public Department getDepartment() {
         return department;
@@ -58,6 +70,7 @@ public class Employee {
                 ", name='" + name + '\'' +
                 ", salary=" + salary +
                 ", department=" + department +
+                ", interests=" + interests +
                 '}';
     }
 }
