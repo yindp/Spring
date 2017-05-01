@@ -1,6 +1,7 @@
 package com.yinom.pdd.spring.model;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by yindp on 4/30/17.
@@ -11,7 +12,15 @@ public class Employee {
     private double salary;
     private Department department;
     private List<String> interests;
+    private Set<String> hobbies;
 
+    public Set<String> getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(Set<String> hobbies) {
+        this.hobbies = hobbies;
+    }
 
     public List<String> getInterests() {
         return interests;
@@ -70,7 +79,7 @@ public class Employee {
                 ", name='" + name + '\'' +
                 ", salary=" + salary +
                 ", department=" + department +
-                ", interests=" + interests +
+                ", hobbies=" + hobbies +
                 '}';
     }
 }

@@ -113,4 +113,13 @@ public class SpringTest {
         Employee emp = (Employee) ac.getBean("employee9");
         System.out.println(emp);
     }
+    /**
+     * Set Collection DI
+     */
+    @Test
+    public void testEmployeeDI10() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
+        Employee emp = (Employee) ac.getBean("employee10");
+        System.out.println(emp);
+    }
 }
