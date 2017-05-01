@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans.xsd">
+http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byName">
 
 
     <!--    Create helloSpring bean, wo don't need set this one anymore, injection;-->
@@ -152,5 +152,18 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
                 <prop key="thirdJob">CEO</prop>
             </props>
         </property>
+    </bean>
+
+
+        <!--AutoWired-->
+    <bean id="dept1" class="com.yinom.pdd.spring.model.Department">
+        <property name="id" value="1"/>
+        <property name="name" value="Finance"/>
+
+    </bean>
+    <!--AutoWired-->
+    <bean id="dept2" class="com.yinom.pdd.spring.model.Department">
+        <property name="id" value="2"/>
+        <property name="name" value="Product"/>
     </bean>
 </beans>

@@ -2,6 +2,7 @@ package com.yinom.pdd.spring.test;
 
 import com.yinom.pdd.spring.ioc.Job;
 import com.yinom.pdd.spring.ioc.Lida;
+import com.yinom.pdd.spring.model.Department;
 import com.yinom.pdd.spring.model.Employee;
 import com.yinom.pdd.spring.service.HelloSpring;
 import org.junit.Before;
@@ -140,5 +141,14 @@ public class SpringTest {
         ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Employee emp = (Employee) ac.getBean("employee12");
         System.out.println(emp);
+    }
+    /**
+     * AutoWired
+     */
+    @Test
+    public void testEmployeeDI13() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
+        Department dept = (Department) ac.getBean("dept1");
+        System.out.println(dept);
     }
 }
