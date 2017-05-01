@@ -7,6 +7,15 @@ public class Employee {
     private int id;
     private String name;
     private double salary;
+    private Department department;
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
 
     public Employee() {
 
@@ -48,6 +57,7 @@ public class Employee {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", salary=" + salary +
+                ", department=" + department +
                 '}';
     }
 }

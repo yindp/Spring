@@ -50,4 +50,16 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--    Static Factory DI-->
     <bean id="employee6" class="com.yinom.pdd.spring.factory.EmployeeFactory" factory-method="createEmployeeStatic"/>
+
+<!--    bean injection-->
+    <bean id="department" class="com.yinom.pdd.spring.model.Department">
+        <property name="id" value="1"/>
+        <property name="name" value="Finance"/>
+    </bean>
+    <bean id="employee7" class="com.yinom.pdd.spring.model.Employee">
+        <property name="id" value="7"/>
+        <property name="name" value="Kim"/>
+        <property name="salary" value="8000"/>
+        <property name="department" ref="department"/>
+    </bean>
 </beans>

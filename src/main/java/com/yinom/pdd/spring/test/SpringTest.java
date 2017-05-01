@@ -85,4 +85,13 @@ public class SpringTest {
         Employee emp = (Employee) ac.getBean("employee6");
         System.out.println(emp);
     }
+    /**
+     * bean DI
+     */
+    @Test
+    public void testEmployeeDI07() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
+        Employee emp = (Employee) ac.getBean("employee7");
+        System.out.println(emp);
+    }
 }
