@@ -1,6 +1,7 @@
 package com.yinom.pdd.spring.model;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -13,6 +14,15 @@ public class Employee {
     private Department department;
     private List<String> interests;
     private Set<String> hobbies;
+    private Map<String,String> favorites;
+
+    public Map<String, String> getFavorites() {
+        return favorites;
+    }
+
+    public void setFavorites(Map<String, String> favorites) {
+        this.favorites = favorites;
+    }
 
     public Set<String> getHobbies() {
         return hobbies;
@@ -79,7 +89,7 @@ public class Employee {
                 ", name='" + name + '\'' +
                 ", salary=" + salary +
                 ", department=" + department +
-                ", hobbies=" + hobbies +
+                ", favorites=" + favorites +
                 '}';
     }
 }
