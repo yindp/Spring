@@ -66,4 +66,23 @@ public class SpringTest {
         Employee emp = (Employee) ac.getBean("employee3");
         System.out.println(emp);
     }
+    /**
+     * Factory instance DI
+     */
+    @Test
+    public void testEmployeeDI05() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
+        Employee emp = (Employee) ac.getBean("employee5");
+        System.out.println(emp);
+    }
+
+    /**
+     * Static Factory instance DI
+     */
+    @Test
+    public void testEmployeeDI06() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
+        Employee emp = (Employee) ac.getBean("employee6");
+        System.out.println(emp);
+    }
 }

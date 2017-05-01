@@ -41,4 +41,13 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
         <constructor-arg index="1" type="java.lang.String" value="TCas"/>
         <constructor-arg index="2" value="45331"/>
     </bean>
+
+
+    <!--Factory instance DI-->
+    <bean id="employeeFactory" class="com.yinom.pdd.spring.factory.EmployeeFactory"/>
+    <bean id="employee5" class="com.yinom.pdd.spring.model.Employee" factory-bean="employeeFactory"
+          factory-method="createEmployee"/>
+
+    <!--    Static Factory DI-->
+    <bean id="employee6" class="com.yinom.pdd.spring.factory.EmployeeFactory" factory-method="createEmployeeStatic"/>
 </beans>
