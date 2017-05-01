@@ -109,7 +109,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
         </property>
     </bean>
 
-    <!--Set parameter DI-->
+    <!--Map parameter DI-->
     <bean id="employee11" class="com.yinom.pdd.spring.model.Employee">
         <property name="id" value="11"/>
         <property name="name" value="Ola"/>
@@ -136,6 +136,21 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
                     <value>Money</value>
                 </entry>
             </map>
+        </property>
+    </bean>
+
+    <!--Properties parameter DI-->
+    <bean id="employee12" class="com.yinom.pdd.spring.model.Employee">
+        <property name="id" value="17"/>
+        <property name="name" value="Ils"/>
+        <property name="salary" value="23000"/>
+        <property name="department" ref="department"/>
+        <property name="jobs">
+            <props>
+                <prop key="firstJob">Tester</prop>
+                <prop key="secondJob">Programmer</prop>
+                <prop key="thirdJob">CEO</prop>
+            </props>
         </property>
     </bean>
 </beans>
