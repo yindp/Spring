@@ -156,13 +156,13 @@ http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="
 
 
         <!--AutoWired-->
-    <bean id="dept1" class="com.yinom.pdd.spring.model.Department">
+    <bean id="dept1" class="com.yinom.pdd.spring.model.Department" scope="singleton">
         <property name="id" value="1"/>
         <property name="name" value="Finance"/>
 
     </bean>
     <!--AutoWired-->
-    <bean id="dept2" class="com.yinom.pdd.spring.model.Department">
+    <bean id="dept2" class="com.yinom.pdd.spring.model.Department" scope="prototype">
         <property name="id" value="2"/>
         <property name="name" value="Product"/>
     </bean>

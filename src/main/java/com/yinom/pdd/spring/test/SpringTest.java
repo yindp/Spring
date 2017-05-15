@@ -14,14 +14,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Created by yindp on 4/30/17.
  */
 public class SpringTest {
+    ApplicationContext ac=null;
     @Before
     public void setUp() throws Exception {
-
+        ac=ac = new ClassPathXmlApplicationContext("application.xml");
     }
 
     @Test
     public void test() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         HelloSpring hs = (HelloSpring) ac.getBean("helloSpring");
         hs.sayHi();
     }
@@ -35,7 +35,6 @@ public class SpringTest {
 
     @Test
     public void testJob02() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Job job = (Job) ac.getBean("job");
         job.doTest();
     }
@@ -45,7 +44,6 @@ public class SpringTest {
      */
     @Test
     public void testEmployeeDI01() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Employee emp = (Employee) ac.getBean("employee1");
         System.out.println(emp);
     }
@@ -54,7 +52,6 @@ public class SpringTest {
      */
     @Test
     public void testEmployeeDI02() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Employee emp = (Employee) ac.getBean("employee2");
         System.out.println(emp);
     }
@@ -63,7 +60,6 @@ public class SpringTest {
      */
     @Test
     public void testEmployeeDI03() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Employee emp = (Employee) ac.getBean("employee3");
         System.out.println(emp);
     }
@@ -72,7 +68,6 @@ public class SpringTest {
      */
     @Test
     public void testEmployeeDI05() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Employee emp = (Employee) ac.getBean("employee5");
         System.out.println(emp);
     }
@@ -82,7 +77,6 @@ public class SpringTest {
      */
     @Test
     public void testEmployeeDI06() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Employee emp = (Employee) ac.getBean("employee6");
         System.out.println(emp);
     }
@@ -91,7 +85,6 @@ public class SpringTest {
      */
     @Test
     public void testEmployeeDI07() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Employee emp = (Employee) ac.getBean("employee7");
         System.out.println(emp);
     }
@@ -101,7 +94,6 @@ public class SpringTest {
      */
     @Test
     public void testEmployeeDI08() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Employee emp = (Employee) ac.getBean("employee8");
         System.out.println(emp);
     }
@@ -110,7 +102,6 @@ public class SpringTest {
      */
     @Test
     public void testEmployeeDI09() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Employee emp = (Employee) ac.getBean("employee9");
         System.out.println(emp);
     }
@@ -119,7 +110,6 @@ public class SpringTest {
      */
     @Test
     public void testEmployeeDI10() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Employee emp = (Employee) ac.getBean("employee10");
         System.out.println(emp);
     }
@@ -129,7 +119,6 @@ public class SpringTest {
      */
     @Test
     public void testEmployeeDI11() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Employee emp = (Employee) ac.getBean("employee11");
         System.out.println(emp);
     }
@@ -138,7 +127,6 @@ public class SpringTest {
      */
     @Test
     public void testEmployeeDI12() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Employee emp = (Employee) ac.getBean("employee12");
         System.out.println(emp);
     }
@@ -147,8 +135,17 @@ public class SpringTest {
      */
     @Test
     public void testEmployeeDI13() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("application.xml");
         Department dept = (Department) ac.getBean("dept1");
         System.out.println(dept);
+    }
+
+    /**
+     * scope
+     */
+    @Test
+    public void testEmployee14() {
+        Department dept1 = (Department) ac.getBean("dept1");
+        Department dept2 = (Department) ac.getBean("dept2");
+        System.out.println(dept1==dept2);
     }
 }
