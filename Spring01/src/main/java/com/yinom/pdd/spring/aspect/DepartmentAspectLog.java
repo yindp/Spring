@@ -28,4 +28,13 @@ public class DepartmentAspectLog {
         System.out.println(result);
         System.out.println("*******log------End Operation");
     }
+
+    public void afterReturnLog(JoinPoint joinPoint) {
+        System.out.println("+++++Execute this notice when the method complete");
+    }
+
+    public void afterThrowLog(Throwable th) {
+        System.out.println("There's  an exception:");
+        System.out.println(th.getMessage());
+    }
 }

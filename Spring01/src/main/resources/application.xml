@@ -17,6 +17,8 @@
             <aop:before method="beforeLog" pointcut-ref="biz"/>
             <aop:after method="afterLog" pointcut-ref="biz"/>
             <aop:around method="aroundLog" pointcut-ref="biz"/>
+            <aop:after-returning method="afterReturnLog" pointcut-ref="biz"/>
+            <aop:after-throwing method="afterThrowLog" pointcut-ref="biz" throwing="th"/>
         </aop:aspect>
     </aop:config>
 </beans>

@@ -8,6 +8,7 @@ public class DepartmentServiceImpl implements DepartmentService{
     public void addDept(String name) {
         //System.out.println(">>>>>log------Add");
         System.out.println("Add a department : "+name);
+        System.out.println(10/0);
         //System.out.println(">>>>>log------End");
 
     }
