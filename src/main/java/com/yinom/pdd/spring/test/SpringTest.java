@@ -148,4 +148,14 @@ public class SpringTest {
         Department dept2 = (Department) ac.getBean("dept2");
         System.out.println(dept1==dept2);
     }
+
+    /**
+     * scope
+     */
+    @Test
+    public void testEmployee15() {
+        Department dept1 = (Department) ac.getBean("dept3");
+        Department dept2 = (Department) ac.getBean("dept3");
+        System.out.println(dept1==dept2);
+    }
 }

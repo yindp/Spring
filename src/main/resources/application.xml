@@ -55,6 +55,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="
     <bean id="department" class="com.yinom.pdd.spring.model.Department">
         <property name="id" value="1"/>
         <property name="name" value="Finance"/>
+        <lookup-method name="getPart" bean="part"/>
     </bean>
     <bean id="employee7" class="com.yinom.pdd.spring.model.Employee">
         <property name="id" value="7"/>
@@ -64,7 +65,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="
     </bean>
 
 
-    <!-- Internal bean-->
+   <!-- &lt;!&ndash; Internal bean&ndash;&gt;
     <bean id="employee8" class="com.yinom.pdd.spring.model.Employee">
         <property name="id" value="8"/>
         <property name="name" value="Oks"/>
@@ -73,9 +74,12 @@ http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="
             <bean id="department" class="com.yinom.pdd.spring.model.Department">
                 <property name="id" value="2"/>
                 <property name="name" value="Research"/>
+                <property name="part" value="test"></property>
             </bean>
+
         </property>
-    </bean>
+
+    </bean>-->
 
 
     <!-- Collection DI-->
@@ -159,11 +163,22 @@ http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="
     <bean id="dept1" class="com.yinom.pdd.spring.model.Department" scope="singleton">
         <property name="id" value="1"/>
         <property name="name" value="Finance"/>
-
+        <lookup-method name="getPart" bean="part"/>
     </bean>
     <!--AutoWired-->
     <bean id="dept2" class="com.yinom.pdd.spring.model.Department" scope="prototype">
         <property name="id" value="2"/>
         <property name="name" value="Product"/>
+        <lookup-method name="getPart" bean="part"/>
+    </bean>
+
+    <bean id="part" class="com.yinom.pdd.spring.model.Part">
+        <property name="id" value="1"/>
+        <property name="name" value="subTest3"/>
+    </bean>
+    <bean id="dept3" class="com.yinom.pdd.spring.model.Department">
+        <property name="id" value="3"/>
+        <property name="name" value="Test3"/>
+        <lookup-method name="getPart" bean="part"/>
     </bean>
 </beans>

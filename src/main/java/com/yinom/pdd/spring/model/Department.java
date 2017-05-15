@@ -3,9 +3,10 @@ package com.yinom.pdd.spring.model;
 /**
  * Created by yindp on 5/1/17.
  */
-public class Department {
+public abstract class Department {
     private int id;
     private String name;
+    private Part part;
 
     public int getId() {
         return id;
@@ -21,6 +22,12 @@ public class Department {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public abstract Part getPart();
+
+    public void setPart(Part part) {
+        this.part = part;
     }
 
     @Override
