@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="departmentService" class="com.yinom.pdd.spring.service.DepartmentServiceImpl"/>
+    <bean id="departmentAspectLog" class="com.yinom.pdd.spring.aspect.DepartmentAspectLog"/>
+
+    <!--AOP configure-->
+    <aop:config>
+        <aop:aspect id="departmentAspect" ref="departmentAspectLog">
+            <aop:pointcut id="biz" expression="execution(* com.yinom.pdd.spring.service.*.*(..))"/>
+        </aop:aspect>
+    </aop:config>
+</beans>
