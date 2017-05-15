@@ -11,4 +11,8 @@ public class DepartmentServiceImpl implements DepartmentService{
         //System.out.println(">>>>>log------End");
 
     }
+
+    public void updateDept(String name) {
+        System.out.println("Update department : "+name);
+    }
 }

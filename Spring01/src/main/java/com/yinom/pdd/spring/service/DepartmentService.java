@@ -5,4 +5,6 @@ package com.yinom.pdd.spring.service;
  */
 public interface DepartmentService {
     public void addDept(String name);
+
+    public void updateDept(String name);
 }

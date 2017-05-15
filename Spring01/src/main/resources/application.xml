@@ -14,6 +14,9 @@
     <aop:config>
         <aop:aspect id="departmentAspect" ref="departmentAspectLog">
             <aop:pointcut id="biz" expression="execution(* com.yinom.pdd.spring.service.*.*(..))"/>
+            <aop:before method="beforeLog" pointcut-ref="biz"/>
+            <aop:after method="afterLog" pointcut-ref="biz"/>
+            <aop:around method="aroundLog" pointcut-ref="biz"/>
         </aop:aspect>
     </aop:config>
 </beans>

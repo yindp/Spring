@@ -19,5 +19,6 @@ public class SpringTest {
     public void test01() {
         DepartmentService ds = (DepartmentService) ac.getBean("departmentService");
         ds.addDept("Head Office");
+        ds.updateDept("Finance");
     }
 }
